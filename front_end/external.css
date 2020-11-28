@@ -1,12 +1,23 @@
 body {
-    background-color: rgb(255, 214, 158);
+    background-color: white
 }
 
 h2,p {
-    font-family: 'Courier New', Courier, monospace;
-    color: black;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color:rgb(221,93,5);
 }
 
 #tap{
     margin-left: 100px;
 }
+
+a:link, a:visited{
+	background-color:#ef6c14;
+	color:white;
+	padding:15px;
+	text-align:center;
+	text-decoration:none;
+	display:inline-block;
+    }
+
+
