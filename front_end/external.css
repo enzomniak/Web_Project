@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(255, 214, 158);
+}
+
+h2,p {
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+}
+
+#tap{
+    margin-left: 100px;
+}
