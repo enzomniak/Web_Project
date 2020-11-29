@@ -1,0 +1,18 @@
+body {
+    background-color: white
+}
+
+h2,p {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color:rgb(221,93,5);
+}
+
+#tap{
+    margin-left: 100px;
+}
+a:link, a:visited{
+    color:blue;
+}
+th{
+    color:white;
+}
