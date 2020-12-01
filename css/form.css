@@ -55,16 +55,45 @@ input[type=radio]{
     border: 2px solid white;
     width: 12px;
     height: 12px;
+    margin-right: 10px;
 }
+
 input[type=radio]:checked{
     background-color: #333;
 }
-
-input[type=number]{ 
+.digit td{
+    border-collapse: collapse;
+    padding: 0px;
+    border: 1px solid black;
+}
+td input[type=text]{ 
+    -webkit-appearance: none;
     -moz-appearance: textfield;
-    appearance: textfield;
-    margin: 0;
+    width: 20px;
     border-style: none;
-    border-bottom-style: dotted;
-    border-color: black;
+}
+.middle label,table,tr{
+    display: inline;
+}
+.middle{
+    width: 60%;
+    margin: auto;
+}
+.bottom{
+    width: 70%;
+    margin: auto;
+}
+.bottom input[type=number]{
+        -moz-appearance: textfield;
+        appearance: textfield;
+        margin: 0;
+        border-style: none;
+        border-bottom-style: dotted;
+        border-color: black;
+}
+.re_entering {
+    margin-top: 50px;
+}
+.re_entering span{
+    margin-left: 50px;
 }
