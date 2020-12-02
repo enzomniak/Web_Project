@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2020 at 03:51 PM
+-- Generation Time: Dec 02, 2020 at 10:11 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -238,8 +238,7 @@ INSERT INTO `student` (`StudentID`, `Prefix`, `FirstName`, `LastName`, `SchoolID
 (58700029, 'MR.', 'Nixon', 'Taylor', 1, 1, 1, 'Lincoln  Kingsley', '1.76', 2),
 (58700031, 'MISS', 'Parker', 'Parker', 1, 1, 1, 'Lane  Lewis', '3.04', 1),
 (58700190, 'MR.', 'Reed', 'Reagan', 1, 1, 1, 'Parker  Carson', '3.17', 1),
-(58710013, 'MR.', 'Smith', 'West', 1, 1, 1, 'Bailey  McKenzie', '2.61', 2),
-(61656565, 'Mr.', 'James', 'Daniel', 11, 29, 11, 'Dumbledee', '3.56', 1);
+(58710013, 'MR.', 'Smith', 'West', 1, 1, 1, 'Bailey  McKenzie', '2.61', 2);
 
 -- --------------------------------------------------------
 

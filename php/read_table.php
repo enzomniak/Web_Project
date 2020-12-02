@@ -16,7 +16,12 @@ onymous">
         // Include database connection file
         require_once "dbconnect.php";
         // Database query.
-        $sql = "SELECT StudentID, Prefix, FirstName, LastName, ProgramID FROM Student";
+        $sql = "
+        SELECT student.StudentID, student.Prefix ,student.FirstName, student.LastName, program.ProgramName
+        FROM student
+        INNER JOIN program
+        ON student.ProgramID = program.ProgramID";
+
         $result = mysqli_query($conn,$sql);
         ?>
         <div class="container">
@@ -35,7 +40,7 @@ onymous">
                     <th>Prefix</th>
                     <th>First Name</th>
                     <th>Last Name</th>
-                    <th>ProgramID</th>
+                    <th>ProgramName</th>
                     <th>Action</th>
                 </tr>
                 <?php
@@ -46,19 +51,19 @@ onymous">
                     $prefix = $row["Prefix"];
                     $first_name = $row["FirstName"];
                     $last_name = $row["LastName"];
-                    $program_id = $row["ProgramID"];
+                    $program_name = $row["ProgramName"];
                 ?>
                 <tr>
                     <td><?= $sid ?></td>
                     <td><?= $prefix ?></td>
                     <td><?= $first_name ?></td>
                     <td><?= $last_name ?></td>
-                    <td><?= $program_id ?></td>
+                    <td><?= $program_name ?></td>
                     <td>
                     <a href="view_entry.php?sid=<?= $sid ?>" class="btn btn-info" role="button">View</a>
-                    <a href="input_update_emp.php?eid=<?= $emp_id ?>" class="btn btn-info" role="button">Update</a>
+                    <a href="input_update_stu.php?sid=<?= $sid ?>" class="btn btn-info" role="button">Update</a>
                     <a href="delete_stu.php?sid=<?= $sid ?>" class="btn btn-info" role="button" onClick="return confirm
-                    ('Delete this employee?')">Delete</a>
+                    ('Delete this entry?')">Delete</a>
                     </td>
                 </tr>
                 <?php

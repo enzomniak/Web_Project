@@ -8,7 +8,20 @@
         // Include database connection file
         require_once "dbconnect.php";
         $sid = $_GET['sid'];
-        $sql="SELECT * FROM Student WHERE StudentID = $sid";
+        $sql="
+        SELECT student.StudentID, student.Prefix ,student.FirstName, student.LastName, student.Advisor,
+        student.GPAX, school.SchoolName, program.ProgramName, dean.DeanName, status.StatusName
+        
+        FROM student
+        INNER JOIN school
+        ON student.SchoolID = school.SchoolID
+        INNER JOIN program
+        ON student.ProgramID = program.ProgramID
+        INNER JOIN dean
+        ON student.DeanID = dean.DeanID
+        INNER JOIN status
+        ON student.StatusID = status.StatusID
+        WHERE studentID = $sid";
         $result = mysqli_query($conn,$sql);
         ?>
         <h2>Student Data</h2>

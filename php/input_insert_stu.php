@@ -4,7 +4,7 @@
         <title> Insert Entry </title>
         <style>
             label{width: 120px; display: inline-block;}
-            input, select {width: 300px; margin: 10px;}
+            input, select {width: 300px; height: 25px; margin: 10px;}
             #show_dean{padding-left: 7%;}
         </style>
         <script defer src="../js/insert_form_ajax.js"></script>
@@ -50,6 +50,5 @@
                 <input type="Reset" value = "Reset Data" style="width: 200px;">
             </div>
         </form>
-        <button onclick="confirmSubmit()">Check</button>
     </body>
 </html>
