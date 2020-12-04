@@ -1,4 +1,68 @@
-.top_left_box{
+*{
+    font-family: "Times New Roman";
+}
+.upper_left_box{
+    margin-top: 40px;
+    margin-left: 60px;
+    width: 400px;
+    height: auto;
+    border: 1px solid black;
+    text-align: center;
+}
+.upper_right_box{
+    margin-top: 40px;
+    margin-right: 60px;
+    width: 400px;
+    height: auto;
+    border: 1px solid black;
+    text-align: center;
+}
+.inline_this{
+    display: inline-block;
+}
+p > span{
+    margin-left: 30px;
+}
+input[type=text]{
+    border-style: none;
+    border-color: black;
+    border-bottom-style: dotted;
+}
+input[type=radio]{
+    box-sizing: border-box;
+    appearance: none;
+    background-color: white;
+    outline: 2px solid #333;
+    border: 2px solid white;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+}
+input[type=radio]:checked{
+    background-color: #333;
+}
+.number_to_txt input[type=number]{
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0;
+    border-style: none;
+    border-bottom-style: dotted;
+    border-color: black;
+}
+.digit td{
+    border-collapse: collapse;
+    padding: 0px;
+    border: 1px solid black;
+}
+td input[type=text]{ 
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    width: 20px;
+    border-style: none;
+}
+
+/* OLD CSS FROM OLDER VERSION OF FORM
+ .top_left_box{
     width: 320px;
     height: 120px;
     margin-left: 80px;
@@ -36,42 +100,13 @@ h5{
 h4{
     margin: 5px;
 }
-input[type=text]{
-    border-style: none;
-    border-color: black;
-    border-bottom-style: dotted;
-}
 #upper_text{
     word-spacing: 5px;
     position: relative;
     margin-left: 50px;
     padding-left: 50px;
 }
-input[type=radio]{
-    box-sizing: border-box;
-    appearance: none;
-    background-color: white;
-    outline: 2px solid #333;
-    border: 2px solid white;
-    width: 12px;
-    height: 12px;
-    margin-right: 10px;
-}
 
-input[type=radio]:checked{
-    background-color: #333;
-}
-.digit td{
-    border-collapse: collapse;
-    padding: 0px;
-    border: 1px solid black;
-}
-td input[type=text]{ 
-    -webkit-appearance: none;
-    -moz-appearance: textfield;
-    width: 20px;
-    border-style: none;
-}
 .middle label,table,tr{
     display: inline;
 }
@@ -83,14 +118,6 @@ td input[type=text]{
     width: 70%;
     margin: auto;
 }
-.bottom input[type=number]{
-        -moz-appearance: textfield;
-        appearance: textfield;
-        margin: 0;
-        border-style: none;
-        border-bottom-style: dotted;
-        border-color: black;
-}
 .re_entering {
     margin-top: 50px;
 }
@@ -99,4 +126,4 @@ td input[type=text]{
 }
 .foot_note{
     margin-top: 100px;
-}
+} */

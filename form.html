@@ -1,62 +1,88 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="css/form.css">
-            <script defer src="js/form_script.js"></script>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- Bootstrap CSS -->
-        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
-        <title>Form Submittion</title>
-    </head>
-    
-    <body>
-        <!-- TOP -->
-        <div class="top_left_box">
-            <h5><label for="school_input_top"">School of </label> <input type="text" id="school_input_top"></h5>
-            <center><h4>Mah Fah Luang University</h4></center>
-            <label for="">No</label> <input type="text"><br>
-            <label for="">Date</label> <input type="text"><br>
-            <label for="">Time</label> <input type="text" size="5"> <label for="">Recorded by</label><input type="text">
-        </div>
-        <div class="top_right_box">
-            <h5 id="form_name">REG 209</h5>
-            <center><h4>Division of Registrar</h4>
-            <h4>Mah Fah Luang University</h4></center>
-            <label for="">No</label> <input type="text"><br>
-            <label for="">Date</label> <input type="text"><br>
-            <label for="">Time</label> <input type="text" size="5"> <label for="">Recorded by</label><input type="text">
-        </div>
-        <div class="upper" style="padding-bottom: 50px;">
-            <center>
-                <img src="imgs/mfu_black_white_logo.png" width="60px">
-                <h4>DIVISION OF REGISTRAR. MAE FAH LUANG UNIVERSITY</h4>
-                <h3>Request Form for Re-entering Students</h3>
-                <h4 id="upper_text">Semester
-                    <input type="radio" name="semester_rad" id="first_rad"><label for="first_rad">First</label>
-                    <input type="radio" name="semester_rad" id="second_rad"><label for="second_rad">Second</label>
-                    <input type="radio"name="semester_rad" id="summer_rad"><label for="summer_rad">Summer</label>
-                    <label for="academic_year"></label>Academic year <input type="text" name="academic_year">
-                </h4>
-            </center>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/form.css"/>
+    <script defer src="js/form_script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid">
+
+        <!-- First Row upper left and right box-->
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="upper_left_box">
+                    <label for="school_of">School of</label> <input type="text" id="school_of">
+                    <h5>Mae Fah Luang University</h5>
+                    <div style="text-align: left;">
+                        <label for="box_no_left">No</label> <input type="text" id="box_no_left">
+                        <label for="box_date_left">Date</label> <input type="text" id="box_date_left"><br>
+                        <label for="box_time_left">Time</label> <input type="text" id="box_time_left" size="4"> 
+                        <label for="box_record_left">Recorded By</label> <input type="text" id="box_record_left">    
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-0 col-md-4" style="margin-top: 8%;">
+                <div class="mx-auto" style="width: 62px;">
+                    <img src="imgs/mfu_black_white_logo.png" width="60px">
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="upper_right_box">
+                    <h5> The Division of Registrar
+                    <br>Mae Fah Luang University</h5>
+                    <div style="text-align: left;">
+                        <label for="box_no_left">No</label> <input type="text" id="box_no_left">
+                        <label for="box_date_left">Date</label> <input type="text" id="box_date_left"><br>
+                        <label for="box_time_left">Time</label> <input type="text" id="box_time_left" size="4"> 
+                        <label for="box_record_left">Recorded By</label> <input type="text" id="box_record_left">    
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- MIDDLE -->
-        <div class="middle">
-            <!-- To the Registrar -->
-            <input type="radio" name = "grad_rad" id="radio_underGrad" style="margin-left: 73.6%;"> <label for="radio_underGrad">Undergraduate student</label>
-            <div>
-                <h5 style="display: inline;"> (1) To the Registrar </h5>
-                <p style="display: inline; padding-left: 50%;"> Student Level </p>
-                <span>
-                    <input type="radio" name="grad_rad" id="radio_grad" style="vertical-align: text-bottom;"> <label for="radio_grad">Graduate student</label>
-                </span>
+        <!-- Second Row semester academic year-->
+        <div class="row">
+            <div class="col d-flex justify-content-center" style="text-align: center; margin-top: 20px;">
+                <div>
+                    <h5>DIVISION OF REGISTRAR, MAE FAH LUANG UNIVERSITY</h5>
+                    <h4>Request Form for Re-entering Student</h4>
+                    <h5>
+                        Semester <input type="radio" id="first_sem" name="top_rad" style="margin-left: 30px;"> <label for="first_sem">First</label>
+                        <input type="radio" id="second_sem" name="top_rad"> <label for="second_sem">Second</label>
+                        <input type="radio" id="summer_sem" name="top_rad"> <label for="summer_sem">Summer</label>
+                        <label for="academic_year" style="margin-left: 30px">Academic year</label> <input type="text">
+                    </h5>
+                </div>
             </div>
-            <!-- Name and ID -->
-            <div>
-                <label for="input_name">Name Mr/ Miss/ Mrs </label> <input type="text" id="input_name" size="60"> 
-                <label for="digit1">Student ID</label>
-                <table class="digit">
+        </div>
+
+        <!-- Third Row to the registrar -->
+        <div class="row">
+            <div class="col-md-8 mt-3">
+                <h5 style="margin-left: 200px;">(1) To the Registrar</h5>
+            </div>
+            <div class="col-md-1 mt-3">
+                <p>Student level</p>
+            </div>
+            <div class="col-md-3">
+                <input type="radio" id="under_grad" name="grad_rad"> <label for="under_grad">Undergraduate student</label>
+                <br>
+                <input type="radio" id="grad_grad" name="grad_rad"> <label for="grad_grad">Graduate student</label>
+            </div>
+        </div>
+
+        <!-- Forth Row Name and StudentID -->
+        <div class="row">
+            <div class="col-sm-12 col-md-7" style="text-align: right;">
+                <p><label for="name_txt">Name Mr/ Miss/ Mrs </label> <input type="text" id="name_txt" size="60"></p>
+            </div>
+            <div class="col-sm-12 col-md-5">
+                <p style="display: inline; margin-right: 10px;">Student ID </p>
+                <table class="digit" style="display: inline;">
                     <tr>
                         <td><input class="digitNum" id="digit1" type="text" maxlength="1"></td>
                         <td><input class="digitNum" id="digit2" type="text" maxlength="1"></td> 
@@ -72,30 +98,47 @@
                 </table>
             </div>
         </div>
-        <br>
 
-        <!-- BOTTOM -->
-        <div class="bottom">
-            <div>
-            <!-- School and program -->
-                <label for="input_school"> Study in/graduated from School of </label> <input type="text" name="input_school" id="input_school" size="50"> 
-                <label for="input_program"> Program of </label> <input type="text" name="input_program" id="input_program" size="40">
-                <br><br>
-                <label for=""> Mobile Phone </label> <input type="number" size="10" step="1">
-            </div>
-            <!-- Reason for re-entering -->
-            <div class="re_entering">
-                <p> I would like to re-entering due to my leave of absence in
-                    <span><input type="radio" name="semester_rad" id="first_semester"> <label for="first_semester">First</label> <span>Semester </span>
-                    <span style="margin-left: 30px;">
-                        <label for="acad_year">Academic year</label></span> <input type="text" name="acad_year" id="acad_year">
-                    </span></p>
-                    <input type="radio" name="semester_rad" id="second_semester" style="margin-left: 40%;"> <label for="second_semester">Second</label>
-            </div>
-            <!-- Footnote -->
-            <div class="foot_note">
-                <p>FUCk</p>
+        <!-- Fifth Row Study school, program -->
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <p><label for="middle_school_of">Study in/graduated from School of</label> <input type="text" id="middle_school_of" size="50">
+                    <label for="program_txt">Program of</label> <input type="text" id="program_txt" size="40">
+                </p>
             </div>
         </div>
-    </body>
+
+        <!-- Sixth Row mobile phone -->
+        <div class="row">
+            <div class="col number_to_txt" style="margin-left: 18%;">
+                <p><label for="phone">Mobile Phone</label> <input type="number" id="phone"></p>
+            </div>
+        </div>
+
+        <!-- Seventh Row reason of absence -->
+        <div class="row">
+            <div class="col-sm-12 col-md-5" style="text-align: right;">
+                <p>I would like to re-entering due to my leave of absence in</p>
+            </div>
+            <div class="col-sm-12 col-md-1">
+                <input type="radio" id="rad_first_sem" name="sem_rad"> <label for="rad_first_sem">First</label>
+                <br>
+                <input type="radio" id="rad_second_sem" name="sem_rad"> <label for="rad_second_sem">Second</label> 
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <p>Semester <span>Academic Year <input type="text"></span></p>
+            </div>
+        </div>
+
+        <!-- Eighth Row foot note -->
+        <div class="row" style="margin-top: 60px;">
+            <div class="col-sm-12 col-md-6" style="text-align: center;">
+                <p>For your consideratipon</p>
+            </div>
+            <div class="col-sm-12 col-md-6" style="margin-top: 40px;">
+                <p>Student's Signature <span><input type="text" size="25"></span></p>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
