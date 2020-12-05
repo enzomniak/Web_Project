@@ -43,7 +43,9 @@
                     <option value="1">Normal</option>
                     <option value="2">Probation1</option>
                     <option value="3">Probation2</option>
-                </select>
+                </select><br>
+                <label for="re_year">Return-Date:</label> <input type="text" id="re_year" name="re_year">(Semester-Year)<br>
+                <label for="abs_year">Absence-Date:</label> <input type="text" id="abs_year" name="abs_year">(Semester-Year)
             </div>
             <div>
                 <input type="Submit" value = "Insert Data" style="width: 200px;">

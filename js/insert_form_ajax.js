@@ -15,7 +15,9 @@ Program: ${y[1].options[y[1].selectedIndex].text}
 Dean: ${x[4].value}
 Advisor: ${x[5].value}
 GPAX: ${x[6].value}
-Status: ${y[2].options[y[2].selectedIndex].text}`;
+Status: ${y[2].options[y[2].selectedIndex].text}
+ReturnYear: ${x[7].value}
+AbsenceYear: ${x[8].value}`;
         return confirm(inputList);
     }
 

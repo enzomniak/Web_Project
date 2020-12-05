@@ -35,4 +35,14 @@
             }
         });
     }
+    function sumbitStudentId(){
+        let sum = "";
+        for(let i = 1; i < 11; i++){
+            console.log(i);
+            console.log("digit"+i);
+            sum += document.getElementById("digit"+i).value;
+        }
+        document.getElementById("submitStudentId").value = sum;
+        return confirm('Sending the form?');
+    }
 }

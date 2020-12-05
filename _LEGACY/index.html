@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="text/html" http-equiv="Content-Type">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="css/external.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <div class="w3-content w3-section" style="max-width:80%">
+      <img class="mySlides" src="imgs/im6.png" style="width:100%">
+      <img class="mySlides" src="imgs/i7.png" style="width:100%">
+      <img class="mySlides" src="imgs/i5.png" style="width:100%">
+      <img class="mySlides" src="imgs/i8.png" style="width:100%">
+    <div>
+      <center>
+        <a href="php/read_table.php" target="_blank" class="button">สำหรับบุคลากร</a>
+        <a href="php/read_table.php" target="_blank" class="button">For Officer</a>
+        <a href="student.html" target="_blank" class="button">สำหรับนักศึกษา</a>
+        <a href="student.html" target="_blank" class="button">For Student</a>
+      </center>
+    </div>
+    
+    <!--JS-->
+    <script>
+      var myIndex = 0;
+      carousel();
+
+      //Carousel function
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 5000); // Change image every 5 seconds
+      }
+    </script>
+  </body>
+</html>
+

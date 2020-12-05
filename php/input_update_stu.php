@@ -26,7 +26,7 @@
         // Include database connection file
         require_once "dbconnect.php";
         $sid = $_GET['sid'];
-        $mainSql="SELECT Prefix, FirstName, LastName, Advisor, GPAX, StatusID FROM student WHERE studentID = $sid";
+        $mainSql="SELECT Prefix, FirstName, LastName, Advisor, GPAX, StatusID, ReturnYear, AbsenceYear FROM student WHERE studentID = $sid";
         $result = mysqli_query($conn,$mainSql);
         error_reporting(0);
         ?>
@@ -40,6 +40,8 @@
             $advisor = $row["Advisor"];
             $gpax = $row["GPAX"];
             $status = $row["StatusID"];
+            $re_year = $row["ReturnYear"];
+            $abs_year = $row["AbsenceYear"];
             }
             ?>
 
@@ -64,7 +66,9 @@
                 <option value="1" id="stat1">Normal</option>
                 <option value="2" id="stat2">Probation1</option>
                 <option value="3" id="stat3">Probation2</option>
-            </select>
+            </select><br>
+            <label for="re_year">Return-Date:</label> <input type="text" id="re_year" name="re_year" value="<?= $re_year ?>">(Semester-Year)<br>
+            <label for="abs_year">Absence-Date:</label> <input type="text" id="abs_year" name="abs_year" value="<?= $abs_year ?>">(Semester-Year)
             <br>
             <input type="Submit" value="Update Data" onclick="return confirm('Are you sure?')">
         </form>

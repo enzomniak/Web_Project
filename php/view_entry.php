@@ -9,8 +9,8 @@
         require_once "dbconnect.php";
         $sid = $_GET['sid'];
         $sql="
-        SELECT student.StudentID, student.Prefix ,student.FirstName, student.LastName, student.Advisor,
-        student.GPAX, school.SchoolName, program.ProgramName, dean.DeanName, status.StatusName
+        SELECT student.StudentID, student.Prefix ,student.FirstName, student.LastName, student.Advisor, student.GPAX,
+        student.ReturnYear, student.AbsenceYear, school.SchoolName, program.ProgramName, dean.DeanName, status.StatusName
         
         FROM student
         INNER JOIN school
