@@ -24,7 +24,7 @@
 <body>
     <div class="container-fluid">
 
-        <form action="recive_form.php" method="post">
+        <form action="form_print.php" method="post">
             <!-- First Row upper left and right box-->
             <div class="row">
                 <div class="col-sm-6 col-md-4">
@@ -132,15 +132,15 @@
             </div>
 
             <!-- Eighth Row foot note -->
-            <div class="row" style="margin-top: 60px;">
+            <!-- <div class="row" style="margin-top: 60px;">
                 <div class="col-sm-12 col-md-6" style="text-align: center;">
-                    <p>For your consideratipon</p>
+                    <p>For your consideration</p>
                 </div>
                 <div class="col-sm-12 col-md-6" style="margin-top: 40px;">
                     <p>Student's Signature <span><input type="text" name="stu_signature" size="25"></span></p>
                 </div>
-            </div>
-            <center style="margin-top: 20px; margin-bottom: 20px;"><input type="submit" value="Submit" onclick="sumbitStudentId()"></center>
+            </div> -->
+            <center style="margin-top: 20px; margin-bottom: 20px;"><input type="submit" value="Submit" onclick="return sumbitStudentId()"></center>
         </form>
     </div>
 </body>

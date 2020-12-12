@@ -51,7 +51,7 @@
         die('Error: ' . mysqli_error($conn));
         }
     else {
-        header("location: ../form_print.html");
+        header("location: form_print.php");
         }
     mysqli_close($conn);
 ?>
