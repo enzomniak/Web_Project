@@ -11,7 +11,7 @@
             //Get current number slot
             currentDigit = parseInt(element.id.replace("digit",""));
             //Check if it's an integer
-            if(parseInt(key) && currentDigit<10){
+            if(parseInt(key) && currentDigit<8){
                 //Move the cursor forward
                 currentDigit++;
                 //Jump to the next number
@@ -35,9 +35,11 @@
             }
         });
     }
+
+    //Get all of the StudentID from each input into one string of number
     function sumbitStudentId(){
         let sum = "";
-        for(let i = 1; i < 11; i++){
+        for(let i = 1; i < 9; i++){
             console.log(i);
             console.log("digit"+i);
             sum += document.getElementById("digit"+i).value;

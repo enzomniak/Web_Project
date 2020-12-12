@@ -10,7 +10,7 @@
         $sid = $_GET['sid'];
         $sql="
         SELECT student.StudentID, student.Prefix ,student.FirstName, student.LastName, student.Advisor, student.GPAX,
-        student.ReturnYear, student.AbsenceYear, school.SchoolName, program.ProgramName, dean.DeanName, status.StatusName
+        student.ReturnYear, student.AbsenceYear, student.MobilePhone, student.StudentLevel, school.SchoolName, program.ProgramName, dean.DeanName, status.StatusName
         
         FROM student
         INNER JOIN school
@@ -18,7 +18,7 @@
         INNER JOIN program
         ON student.ProgramID = program.ProgramID
         INNER JOIN dean
-        ON student.DeanID = dean.DeanID
+        ON school.SchoolID = dean.SchoolID
         INNER JOIN status
         ON student.StatusID = status.StatusID
         WHERE studentID = $sid";

@@ -47,4 +47,38 @@ AbsenceYear: ${x[8].value}`;
         };
         xhr.send();
     }
+
+    //Used in the form_input php
+    function fillInForm(){
+        let name = document.getElementById("name_txt").value;
+        let fullName = "";
+        let tempNumber = 1;
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", `../php/fill_in_form.php?name=${name}`, true);
+        xhr.onload = function(){
+            if(this.status == 200){
+                console.log(this.responseText);
+                let response = JSON.parse(this.responseText);
+                // console.log(response[0].StudentID[0]);
+
+                //Get StudentID from the database into boxes in form page
+                for(let i in response[0].StudentID){
+                    document.getElementById("digit"+tempNumber).value = response[0].StudentID[i];
+                    tempNumber++;
+                    // console.log(i);
+                }
+
+                //Set full name
+                fullName += response[0].FirstName+" "+response[0].LastName;
+                document.getElementById("name_txt").value = fullName;
+
+                //Get all other data
+                document.getElementById("phone").value = response[0].MobilePhone;
+                // document.getElementById("name_txt").value = newName;
+                // document.getElementById("name_txt").value = newName;
+
+            }
+        };
+        xhr.send();
+    }
 }

@@ -8,16 +8,17 @@
     $lname=$_POST['lname'];
     $school=$_POST['school'];
     $program=$_POST['program'];
-    $dean=$_POST['dean'];
     $advisor=$_POST['advisor'];
     $gpax=$_POST['gpax'];
     $status=$_POST['status'];
     $re_year=$_POST['re_year'];
     $abs_year=$_POST['abs_year'];
+    $phone=$_POST['phone'];
+    $stu_lvl=$_POST['stu_lvl'];
 
     // Insert data
     $sql="INSERT INTO student VALUES ($sid, '$prefix', '$fname', '$lname', $school, $program,
-                                        $dean, '$advisor', $gpax, $status, '$re_year', '$abs_year')";
+                                    '$advisor', $gpax, $status, '$re_year', '$abs_year', '$phone', '$stu_lvl')";
     $result=mysqli_query($conn, $sql);
     if (!$result){
         die('Error: ' . mysqli_error($conn));
