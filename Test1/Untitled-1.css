@@ -1,0 +1,12 @@
+<style>
+    body {
+        background-image: url("BG2.jpg");
+        background-attachment: fixed;
+    }
+
+    h2,
+    p,
+    strong {
+        color: white;
+    }
+</style>
